@@ -3,23 +3,25 @@
   position: absolute;
 
   &__w1 {
-    animation: translate-wave 6s infinite alternate-reverse;
+    animation: translate-wave 5s infinite alternate-reverse;
+    transform: translateY(calc(var(--scrollPosition) * -0.2px));
     fill: #b37012;
   }
 
   &__w2 {
-    animation: translate-wave 5s infinite alternate-reverse;
+    animation: translate-wave 4s infinite alternate-reverse;
+    transform: translateY(calc(var(--scrollPosition) * -0.15px));
     fill: #c97e16;
   }
 
   &__w3 {
-    animation: translate-wave 4s infinite alternate-reverse;
+    animation: translate-wave 3s infinite alternate-reverse;
+    transform: translateY(calc(var(--scrollPosition) * -0.06px));
     fill: #e5921d;
   }
 
   &__w4 {
     animation: translate-wave 3s infinite alternate-reverse;
-    transform: translateY(5px);
     fill: #ffa62b;
   }
 }
@@ -29,6 +31,6 @@
     transform: translate(-100px, 0);
   }
   100% {
-    transform: translate(100px, 5px);
+    transform: translate(100px, 1);
   }
 }

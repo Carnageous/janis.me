@@ -1,5 +1,16 @@
+@use "@styles/variables";
+
 .app-home {
   &__content {
-    height: 2000px;
+    height: 1000px;
+    padding: 80px 120px;
+    background-color: #eeeeee;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 3em;
+      color: variables.$primary;
+      font-weight: 800;
+    }
   }
 }

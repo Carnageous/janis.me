@@ -9,23 +9,27 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 
   &__title {
-    position: absolute;
+    position: fixed;
     font-weight: 800;
     font-size: 5em;
     color: variables.$white;
     text-transform: uppercase;
-    animation: title-translate 1s ease-out;
-    transform: translateY(-50px);
+    animation: title-translate 0.8s ease-out;
+    transform: translateY(-200px) scale(calc(var(--scrollPosition) * 0.011));
+    top: 50%;
   }
 }
 
 @keyframes title-translate {
   0% {
-    transform: translateY(300px);
+    transform: translateY(100px);
+    opacity: 0;
   }
   100% {
-    transform: translateY(-50px);
+    transform: translateY(-200px);
+    opacity: 1;
   }
 }

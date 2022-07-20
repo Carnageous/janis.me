@@ -34,3 +34,12 @@ a {
     background-color: variables.$primary;
   }
 }
+
+a {
+  border-bottom: 2px solid variables.$primary;
+  transition: all 50ms ease-in-out;
+
+  &:hover {
+    border-bottom: 3px solid variables.$primary;
+  }
+}
