@@ -1,0 +1,31 @@
+@use "@styles/variables";
+
+.app-header {
+  background-color: variables.$dark-blue;
+  border-bottom: 1px solid #e5e5e5;
+  height: calc(100vh + 1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    position: absolute;
+    font-weight: 800;
+    font-size: 5em;
+    color: variables.$white;
+    text-transform: uppercase;
+    animation: title-translate 1s ease-out;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes title-translate {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}

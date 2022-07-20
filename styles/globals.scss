@@ -1,0 +1,36 @@
+@use "variables";
+
+@import url(sanitize.css);
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: #0a4c95 #c2d2e4;
+  scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 15px;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: variables.$dark-blue;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: variables.$primary;
+  }
+}
