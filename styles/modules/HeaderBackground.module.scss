@@ -24,6 +24,14 @@
     animation: translate-wave 3s infinite alternate-reverse;
     fill: #ffa62b;
   }
+
+  &::before {
+    content: "";
+    height: 200px;
+    width: 100%;
+    background-color: #ffa62b;
+    position: absolute;
+  }
 }
 
 @keyframes translate-wave {

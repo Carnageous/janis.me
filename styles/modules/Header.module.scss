@@ -1,5 +1,7 @@
 @use "@styles/variables";
 
+$scroll-factor: 0.01;
+
 .app-header {
   background-color: variables.$dark-blue;
   border-bottom: 1px solid #e5e5e5;
@@ -15,22 +17,24 @@
   &__title {
     position: fixed;
     font-weight: 800;
-    font-size: 5em;
+    // The font size is set so high because it's scaled by the scroll transform effect
+    font-size: 7em;
     color: variables.$white;
     text-transform: uppercase;
+    top: 40%;
+
     animation: title-translate 0.8s ease-out;
-    transform: translateY(-200px) scale(calc(var(--scrollPosition) * 0.011));
-    top: 50%;
+    transform: translateY(-200px) scale(calc(var(--scrollPosition) * $scroll-factor));
   }
 }
 
 @keyframes title-translate {
   0% {
-    transform: translateY(100px);
+    transform: translateY(100px) scale(calc(var(--scrollPosition) * $scroll-factor));
     opacity: 0;
   }
   100% {
-    transform: translateY(-200px);
+    transform: translateY(-200px) scale(calc(var(--scrollPosition) * $scroll-factor));
     opacity: 1;
   }
 }

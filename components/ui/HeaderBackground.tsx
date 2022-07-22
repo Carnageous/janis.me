@@ -10,7 +10,7 @@ export function HeaderBackground() {
 
   useEffect(() => {
     setScrollVariable({
-      "--scrollPosition": scrollPosition,
+      "--scrollPosition": scrollPosition > 300 ? 300 : scrollPosition,
     } as React.CSSProperties);
   }, [scrollPosition]);
 

@@ -13,8 +13,8 @@ export default function Header() {
 
   useEffect(() => {
     setScrollVariable({
-      "--scrollPosition": scrollPosition < 90 ? 90 : scrollPosition,
-      display: scrollPosition > 320 ? "none" : "block",
+      "--scrollPosition": scrollPosition < 30 ? 30 : scrollPosition,
+      display: scrollPosition > 500 ? "none" : "block",
     } as React.CSSProperties);
   }, [scrollPosition]);
 
