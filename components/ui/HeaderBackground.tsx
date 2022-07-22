@@ -63,7 +63,7 @@ export function HeaderBackground() {
         href="assets/astronaut.svg"
         height="120"
         x={astronautPosition}
-        y={astronautClickCount < CLICK_COUNT_MAX ? 380 : 500}
+        y={astronautClickCount < CLICK_COUNT_MAX ? 380 : 1000}
         z="2"
         onClick={onAstronautClick}
         style={{ transition: "all 1s ease-in-out" }}
