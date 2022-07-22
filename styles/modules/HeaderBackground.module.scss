@@ -1,3 +1,5 @@
+@use "@styles/variables";
+
 .app-header-background {
   height: 100%;
   position: absolute;
@@ -5,24 +7,24 @@
   &__w1 {
     animation: translate-wave 5s infinite alternate-reverse;
     transform: translateY(calc(var(--scrollPosition) * -0.2px));
-    fill: #b37012;
+    fill: variables.$yellow-3;
   }
 
   &__w2 {
     animation: translate-wave 4s infinite alternate-reverse;
     transform: translateY(calc(var(--scrollPosition) * -0.15px));
-    fill: #c97e16;
+    fill: variables.$yellow-2;
   }
 
   &__w3 {
     animation: translate-wave 3s infinite alternate-reverse;
     transform: translateY(calc(var(--scrollPosition) * -0.06px));
-    fill: #e5921d;
+    fill: variables.$yellow-1;
   }
 
   &__w4 {
     animation: translate-wave 3s infinite alternate-reverse;
-    fill: #ffa62b;
+    fill: variables.$primary;
   }
 
   &::before {

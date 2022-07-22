@@ -1,11 +1,11 @@
 @use "@styles/variables";
+@use "include-media" as *;
 
 $scroll-factor: 0.01;
 
 .app-header {
   background-color: variables.$dark-blue;
-  border-bottom: 1px solid #e5e5e5;
-  height: calc(100vh + 1px);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,19 +22,27 @@ $scroll-factor: 0.01;
     color: variables.$white;
     text-transform: uppercase;
     top: 40%;
+    white-space: nowrap;
 
     animation: title-translate 0.8s ease-out;
-    transform: translateY(-200px) scale(calc(var(--scrollPosition) * $scroll-factor));
+    transform: translateY(-200px)
+      scale(calc(var(--scrollPosition) * $scroll-factor));
+
+    @include media("<=tablet") {
+      font-size: 5em;
+    }
   }
 }
 
 @keyframes title-translate {
   0% {
-    transform: translateY(100px) scale(calc(var(--scrollPosition) * $scroll-factor));
+    transform: translateY(100px)
+      scale(calc(var(--scrollPosition) * $scroll-factor));
     opacity: 0;
   }
   100% {
-    transform: translateY(-200px) scale(calc(var(--scrollPosition) * $scroll-factor));
+    transform: translateY(-200px)
+      scale(calc(var(--scrollPosition) * $scroll-factor));
     opacity: 1;
   }
 }

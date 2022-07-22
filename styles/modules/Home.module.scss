@@ -4,12 +4,16 @@
   &__content {
     min-height: 1000px;
     padding: 80px 120px;
-    background-color: #fefefe;
+    background-color: variables.$primary;
+    // overlapp the header
+    z-index: 1;
+    position: absolute;
+    width: 100%;
 
     h1 {
       text-transform: uppercase;
       font-size: 3em;
-      color: variables.$primary;
+      color: variables.$white;
       font-weight: 800;
     }
   }
